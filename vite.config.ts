@@ -32,4 +32,5 @@ export default defineConfig({
         GIT_BRANCH: JSON.stringify(gitBranch),
         BUILD_DATE: JSON.stringify(buildDate),
     },
+    base: '/react-mui-starterkit/',
 } as UserConfigExport);
