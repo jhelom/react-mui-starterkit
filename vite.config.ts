@@ -32,5 +32,6 @@ export default defineConfig({
         GIT_BRANCH: JSON.stringify(gitBranch),
         BUILD_DATE: JSON.stringify(buildDate),
     },
-    base: '/react-mui-starterkit/',
+    // eslint-disable-next-line no-undef
+    base: process.env.NODE_ENV === 'production' ? '/react-mui-starterkit/' : '/',
 } as UserConfigExport);
