@@ -1,3 +1,5 @@
 export const AppPath = {
-    Home: '/',
+    Home: BASE_PATH,
 };
+
+

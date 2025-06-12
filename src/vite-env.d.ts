@@ -3,3 +3,4 @@
 declare const GIT_COMMIT: string;
 declare const GIT_BRANCH: string;
 declare const BUILD_DATE: string;
+declare const BASE_PATH: string;
