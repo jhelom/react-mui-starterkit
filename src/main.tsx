@@ -8,9 +8,11 @@ import {LocalizationProvider} from '@mui/x-date-pickers';
 import {AdapterDateFns} from '@mui/x-date-pickers/AdapterDateFns';
 import {ja} from 'date-fns/locale';
 import log from 'loglevel';
+import Zod from 'zod';
 
 import {router} from './app-router.tsx';
 import {theme} from './theme.ts';
+import {zodJapaneseErrorMap} from './helper/zod-japanese-error-map.ts';
 
 const mode = import.meta.env.MODE;
 const level = import.meta.env.VITE_LOG_LEVEL || 'info';
@@ -23,7 +25,7 @@ log.info('version', {
     }
 );
 
-// Zod.setErrorMap(zodJapaneseErrorMap);
+Zod.setErrorMap(zodJapaneseErrorMap);
 
 const queryClient = new QueryClient({
         defaultOptions: {
