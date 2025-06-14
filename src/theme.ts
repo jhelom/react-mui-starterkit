@@ -1,15 +1,15 @@
-import { createTheme } from '@mui/material';
-import { jaJP } from '@mui/x-data-grid/locales';
-import { blue, red, teal, yellow } from '@mui/material/colors';
+import {createTheme} from '@mui/material';
+import {jaJP} from '@mui/x-data-grid/locales';
+import {blue, pink, red, teal} from '@mui/material/colors';
 import '@mui/x-data-grid/themeAugmentation';
 import '@mui/x-date-pickers/themeAugmentation';
-import type { PickerDayOwnerState } from '@mui/x-date-pickers/PickersDay';
+import type {PickerDayOwnerState} from '@mui/x-date-pickers/PickersDay';
 
 
 export const theme = createTheme({
     palette: {
-        primary: teal,
-        secondary: yellow,
+        primary: blue,
+        secondary: pink,
         divider: '#666',
     },
     components: {
@@ -158,7 +158,7 @@ export const theme = createTheme({
         },
         MuiPickersDay: {
             styleOverrides: {
-                root: ({ ownerState }: { ownerState: PickerDayOwnerState }) => {
+                root: ({ownerState}: { ownerState: PickerDayOwnerState }) => {
                     const day = ownerState.day?.getDay?.();
                     if (day === 0) {
                         // 日曜
@@ -202,6 +202,11 @@ export const theme = createTheme({
                 root: {
                     fontSize: '1rem',
                 },
+            },
+        },
+        MuiInputLabel: {
+            defaultProps: {
+                size: 'small',
             },
         },
     },
